@@ -1,125 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marshall Epie – Move With Meaning</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url('your-photo.jpg') no-repeat center center fixed;
-      background-size: cover;
+      color: #222;
+      background-color: #f5f5f5;
+    }
+    .hero {
+      background: url('media/your-photo.jpg') center/cover no-repeat;
+      height: 100vh;
       color: white;
-    }
-    .overlay {
-      background: rgba(0, 0, 0, 0.7);
-      min-height: 100vh;
-      padding: 2rem;
-      margin-left: 200px;
-    }
-    .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      margin-top: 10vh;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-blend-mode: darken;
     }
-    .header h1 {
+    .hero h1 {
       font-size: 3rem;
-      margin-bottom: 0.5rem;
+      margin: 0;
     }
-    .header h2 {
+    .hero h2 {
+      font-weight: normal;
       font-size: 1.5rem;
-      color: #ddd;
+      margin: 0.5rem 0;
     }
     .intro {
-      max-width: 600px;
-      margin: 2rem auto;
-      text-align: center;
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: auto;
       font-size: 1.2rem;
+      text-align: center;
     }
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 200px;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.85);
+    .tiles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       padding: 2rem 1rem;
+      gap: 2rem;
     }
-    .nav a {
-      display: block;
-      color: white;
+    .tile {
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      width: 250px;
+      text-align: center;
+    }
+    .tile a {
       text-decoration: none;
-      margin: 1rem 0;
+      color: #006064;
       font-weight: bold;
     }
-    .quote {
+    .highlight {
+      background-color: #e0f7fa;
       text-align: center;
+      padding: 2rem 1rem;
+    }
+    .highlight blockquote {
+      font-size: 1.2rem;
       font-style: italic;
-      margin-top: 4rem;
+      margin: 1rem auto;
+      max-width: 600px;
+    }
+    .links-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem 1rem;
+      gap: 1rem;
+    }
+    .links-grid a {
+      background-color: #ffffff;
+      padding: 0.75rem 1.25rem;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #1a237e;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s;
+    }
+    .links-grid a:hover {
+      background-color: #e3f2fd;
     }
     footer {
+      background: #212121;
+      color: white;
       text-align: center;
-      margin-top: 5rem;
-      font-size: 0.9rem;
-      color: #aaa;
+      padding: 1.5rem;
     }
-
-    @media screen and (max-width: 768px) {
-      .nav {
-        position: static;
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        background: rgba(0, 0, 0, 0.9);
-      }
-      .nav a {
-        margin: 0.5rem 1rem;
-      }
-      .overlay {
-        margin-left: 0;
-        padding-top: 1rem;
-      }
-      .header h1 {
-        font-size: 2rem;
-      }
-      .header h2 {
-        font-size: 1rem;
-      }
+    footer a {
+      color: #80deea;
+      margin: 0 0.5rem;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <div class="nav">
-    <a href="/school.html">School</a>
-    <a href="/electrics.html">Electrics</a>
-    <a href="/mai-will.html">MAI Will</a>
-    <a href="/coaching.html">Coaching</a>
-    <a href="/music.html">Music</a>
-    <a href="/tiktok.html">TikTok</a>
-    <a href="/blog.html">Blog</a>
-    <a href="/mastery.html">Mastery</a>
-    <a href="/connect.html">Connect</a>
+  <div class="hero">
+    <h1>Marshall Epie</h1>
+    <h2>Move With Meaning</h2>
+    <p>Where creativity, philosophy, and technology converge.</p>
   </div>
 
-  <div class="overlay">
-    <div class="header">
-      <h1>Marshall Epie</h1>
-      <h2>Move With Meaning</h2>
-    </div>
-    <div class="intro">
-      Welcome to my world. I'm Marshall Epie, and this is where my play, passions, and philosophy all connect. From tech to movement, music to education—everything lives here.
-    </div>
-    <div class="quote">
-      "Minimum movement, maximum effect."
-    </div>
-    <footer>
-      &copy; 2025 Marshall Epie. All rights reserved.
-    </footer>
+  <div class="intro">
+    <p>I build systems, not just code. I teach motion, not just martial arts. I record legacy, not just video. Welcome to my world—where what others call work, I call play.</p>
   </div>
+
+  <div class="tiles">
+    <div class="tile">
+      <h3>Explore the School</h3>
+      <a href="school.html">Visit School</a>
+    </div>
+    <div class="tile">
+      <h3>MAI Will App</h3>
+      <a href="mai-will.html">Learn About MAI Will</a>
+    </div>
+    <div class="tile">
+      <h3>The Art of Laziness</h3>
+      <a href="mastery.html">Read the Philosophy</a>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <blockquote>“Minimum movement. Maximum effect.”</blockquote>
+    <p><em>Featured TikTok or music clip embed could go here.</em></p>
+  </div>
+
+  <div class="links-grid">
+    <a href="coaching.html">Coaching</a>
+    <a href="music.html">Music</a>
+    <a href="tiktok.html">TikTok</a>
+    <a href="blog.html">Blog</a>
+    <a href="connect.html">Connect</a>
+    <a href="electrics.html">Electrics</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Marshall Epie. All rights reserved.</p>
+  </footer>
 </body>
 </html>
